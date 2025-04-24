@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="sidebar" id="sidebar">
+      <div class="user-info" id="userInfo">
+        <img id="userProfilePicture" src="" alt="Profile Picture" />
+        <input id="usernameInput" type="text" placeholder="Enter your name" />
+        <button id="updateUsernameButton">Update Name</button>
+        <div class="reaction-stats" id="reactionStats">
+          <p>👍 0</p>
+          <p>❤️ 0</p>
+          <p>👀 0</p>
+        </div>
+      </div>
+      <div class="channel-management">
+        <h3>Channels</h3>
+        <div id="channelList">No channels loaded</div>
+        <input id="channelCodeInput" type="text" placeholder="Enter channel code" maxlength="8" />
+        <button id="joinChannelButton">Join Channel</button>
+        <input id="channelNameInput" type="text" placeholder="Enter channel name" />
+        <button id="createChannelButton">Create Channel</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header">
+        <h1>Chat App</h1>
+        <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+      </div>
+      <div class="chat-box" id="messages"></div>
+      <div class="input-area">
+        <input type="text" id="messageInput" placeholder="Type a message..." />
+        <button id="sendButton">Send</button>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/chat.js"></script>
+  </body>
+</html>
